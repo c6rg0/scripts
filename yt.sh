@@ -2,10 +2,6 @@
 # README:
 # Dependencies: yt-dlp, ffmpeg,
 # Nothing more.
-#!/usr/bin/env bash
-# README:
-# Dependencies: yt-dlp, ffmpeg
-# Nothing more.
 
 echo "YT audio downloader:"
 echo "(NOTE: This won't download playlists)"
