@@ -15,8 +15,6 @@ $ExHdd=sda1
 sudo mkdir -p "/mnt/$ExHdd"
 sudo mount "/dev/$ExHdd" "/mnt/$ExHdd"
 sync
-watch -d grep -e Dirty: -e Writeback: /proc/meminfo
-
 cd "/mnt/$ExHdd"
 
 echo ""
@@ -24,55 +22,35 @@ echo ""
 # Archiving
 tar -cvf Documents.tar.gz "$Documents"
 sync
-watch -d grep -e Dirty: -e Writeback: /proc/meminfo
-
-echo ""
-
 mv -v ~/Documents.tar.gz .
 sync
-watch -d grep -e dirty: -e writeback: /proc/meminfo
 
 echo ""
 
 tar -cvf Code.tar.gz "$Code"
 sync
-watch -d grep -e Dirty: -e Writeback: /proc/meminfo
-
-echo ""
-
 mv -v ~/Code.tar.gz .
 sync
-watch -d grep -e dirty: -e writeback: /proc/meminfo
 
 echo ""
 
 tar -cvf Osu.tar.gz "$Osu"
 sync
-watch -d grep -e Dirty: -e Writeback: /proc/meminfo
-
-echo ""
-
 mv -v ~/Osu.tar.gz .
 sync
-watch -d grep -e dirty: -e writeback: /proc/meminfo
 
 echo ""
 
 tar -cvf Pictures.tar.gz "$Pictures"
 sync
-watch -d grep -e Dirty: -e Writeback: /proc/meminfo
+mv -v ~/Pictures.tar.gz .
+sync
 
 echo ""
 
 tar -cvf Music.tar.gz "$Music"
 sync
-watch -d grep -e Dirty: -e Writeback: /proc/meminfo
-
-echo ""
-
-mv -v ~/Documents.tar.gz .
+mv -v ~/Music.tar.gz .
 sync
-watch -d grep -e dirty: -e writeback: /proc/meminfo
 
 echo "All done!"
-
